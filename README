@@ -1,13 +1,16 @@
-# Version
+Version
+========
 It's a first alpha version and need some tweak to function.
 
-#Description
+Description
+===========
 
 This plugin is used in Apostrophenow CMS build with Symfony and add a new slot:
 
-* aRichTextCkEditor
+. aRichTextCkEditor
 
 You can use it like the aRichText slot
 
-## Requirements
+Requirements
+============
 You must install ckeditor library.
