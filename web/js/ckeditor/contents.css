@@ -1,0 +1,46 @@
+/*
+Copyright (c) 2003-2010, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.html or http://ckeditor.com/license
+*/
+
+body
+{
+	font: 13px/1.231 arial,helvetica,clean,sans-serif;
+	/* Text color */
+	color: #222;
+	/* Remove the background color to make it transparent */
+	background-color: #fff;
+}
+
+html
+{
+	/* #3658: [IE6] Editor document has horizontal scrollbar on long lines
+	To prevent this misbehavior, we show the scrollbar always */
+	_overflow-y: scroll
+}
+
+img:-moz-broken
+{
+	-moz-force-broken-image-icon : 1;
+	width : 24px;
+	height : 24px;
+}
+img, input, textarea{	cursor: default;}
+strong { font-weight: bold}
+p { margin:0 0 0.4em 0;padding:0;}
+.destacat { padding:10px;border: 2px #ccc solid;background-color: #e86807;color:#fff;}
+a {text-decoration: none !important;color: #009EE0}
+a:hover {color:#E86807;}
+h1 {font-size: 2em}
+h2 {font-size: 1.5em; color: #e86807; font-weight: bold;border-bottom: 1px solid #000;}
+h3 {color:#000000;font-size:1.2em;font-weight:normal;margin:0 0 5px;}
+h4 {font-size: 1em}
+h5 {font-size: .83em}
+h6 {font-size: .75em}
+img {	margin:10px; border: 1px solid #ccc;}
+td {	font-size: 10px;}
+pre {	font: 14px/18px "Courier New", monospace;}
+ul li { list-style-type: disc; }
+ol.llista_faq { }
+.alinear_left { float:left}
+.alinear_right { float:right }

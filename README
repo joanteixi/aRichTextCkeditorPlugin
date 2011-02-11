@@ -14,3 +14,17 @@ You can use it like the aRichText slot
 Requirements
 ============
 You must install ckeditor library.
+
+
+Install
+========
+
+* Download the plugin and be sure to enable it in ProjectConfiguration
+* Add aRichTextCkeditorSlot module to enabled_modules at settings.yml
+* Add slot to app.yml list slots: aRichTextCkeditorSlot
+* Add "aRichTextCkeditor" on slot_types in app.yml
+* Rebuild classes: symfony d:build --all-classes
+
+
+Add this slot to somewhere in your templates. 
+ 

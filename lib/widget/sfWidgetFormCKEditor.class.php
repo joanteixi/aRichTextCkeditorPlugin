@@ -12,12 +12,26 @@ class sfWidgetFormCKEditor extends sfWidgetFormTextarea {
     $this->addOption('height', '225');
     $this->addOption('width', '100%');
 
+    $path = sfConfig::get('sf_rich_text_ck_js_dir','aRichTextCkeditorPlugin/js/ckeditor');
+    $php_file =  $path . DIRECTORY_SEPARATOR . 'ckeditor.php';
+
+    if (!is_readable(sfConfig::get('sf_web_dir') . DIRECTORY_SEPARATOR . $php_file)) {
+      throw new sfConfigurationException('You must install FCKEditor to use this widget (see rich_text_fck_js_dir settings). ' . sfConfig::get('sf_web_dir') . DIRECTORY_SEPARATOR . $php_file);
+    }
+    // CKEditor.php class is written with backward compatibility of PHP4.
+    // This reportings are to turn off errors with public properties and already declared constructor
+//    $error_reporting = error_reporting(E_ALL);
+
+    require_once(sfConfig::get('sf_web_dir') . DIRECTORY_SEPARATOR . $php_file);
+
+    // turn error reporting back to your settings
+//    error_reporting($error_reporting);
     $editorClass = 'CKEditor';
     if (!class_exists($editorClass)) {
       throw new sfConfigurationException(sprintf('CKEditor class not found'));
     }
     $this->_editor = new $editorClass();
-    $this->_editor->basePath = sfConfig::get('app_ckeditor_basePath','/js/ckeditor/');
+    $this->_editor->basePath = sfConfig::get('app_ckeditor_basePath',$path.'/');
     $this->_editor->returnOutput = true;
     if (sfConfig::get('app_ckfinder_active', false) == 'true') {
       $finderClass = 'CKFinder';
