@@ -1,19 +1,13 @@
-Description
-===========
+# aRichTextCkeditor plugin (for symfony 1.4 and apostrophe 1.5) #
 
-This plugin is used in Apostrophenow CMS build with Symfony and add a new slot:
+## Description ##
 
-. aRichTextCkEditor
-
-You can use it like the aRichText slot
-
-Requirements
-============
-You must install ckeditor library.
+This plugin is used in Apostrophenow CMS build with Symfony and add 'aRichTextCkEditor' slot. It's just a copy of the 
+aRichText that uses fckEditor. 
 
 
-Install
-========
+## Install ##
+
 
 * Download the plugin and be sure to enable it in ProjectConfiguration
 * Add aRichTextCkeditorSlot module to enabled_modules at settings.yml
