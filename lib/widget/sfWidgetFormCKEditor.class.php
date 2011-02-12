@@ -1,4 +1,5 @@
 <?php
+// original class from sfCkEditorPlugin
 
 class sfWidgetFormCKEditor extends sfWidgetFormTextarea {
 
